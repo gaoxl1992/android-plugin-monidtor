@@ -1,0 +1,45 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:2:1-20:12
+	package
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:6:5-93
+	android:name
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:6:22-90
+application
+ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:8:5-18:19
+service#com.otc.notification.OtcNotificationListenerService
+ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:10:9-17:19
+	android:exported
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:13:13-36
+	android:permission
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:12:13-87
+	android:name
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:11:13-59
+intent-filter#action:name:android.service.notification.NotificationListenerService
+ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:14:13-16:29
+action#android.service.notification.NotificationListenerService
+ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:15:17-99
+	android:name
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:15:25-96
+uses-sdk
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+		ADDED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml

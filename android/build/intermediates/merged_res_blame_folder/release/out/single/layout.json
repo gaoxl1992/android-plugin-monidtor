@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout/custom_dialog.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout/notification_template_part_time.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout/notification_template_part_chronometer.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout/notification_template_part_chronometer.xml"
+    }
+]

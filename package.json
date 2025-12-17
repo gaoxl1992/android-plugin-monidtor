@@ -1,0 +1,19 @@
+{
+  "name": "otc-notification-listener",
+  "id": "otc-notification-listener",
+  "version": "1.0.0",
+  "description": "OTC 通知监听插件",
+  "_dp_type": "nativeplugin",
+  "_dp_nativeplugin": {
+    "android": {
+      "plugins": [
+        {
+          "type": "module",
+          "name": "OtcNotificationListener",
+          "class": "com.otc.notification.OtcNotificationListenerModule"
+        }
+      ],
+      "integrateType": "aar"
+    }
+  }
+}

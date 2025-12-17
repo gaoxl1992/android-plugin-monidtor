@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout-v21/notification_action_tombstone.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout-v21/notification_template_icon_group.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout-v21/notification_action.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "com.otc.notification-merged_res-6:/layout-v21/notification_template_custom_big.xml",
+        "source": "com.otc.notification-core-1.9.0-0:/layout-v21/notification_template_custom_big.xml"
+    }
+]

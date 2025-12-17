@@ -1,0 +1,134 @@
+package com.otc.notification;
+
+import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.util.Log;
+
+import com.alibaba.fastjson.JSONObject;
+
+import io.dcloud.feature.uniapp.annotation.UniJSMethod;
+import io.dcloud.feature.uniapp.bridge.UniJSCallback;
+import io.dcloud.feature.uniapp.common.UniModule;
+
+/**
+ * 通知监听 UniApp 模块
+ * 提供 JS 调用接口
+ */
+public class OtcNotificationListenerModule extends UniModule {
+    
+    private static final String TAG = "OtcNotificationModule";
+    private UniJSCallback messageCallback;
+    
+    /**
+     * 检查是否有通知监听权限
+     * @return true 已授权，false 未授权
+     */
+    @UniJSMethod(uiThread = false)
+    public boolean checkPermission() {
+        try {
+            Context context = mUniSDKInstance.getContext();
+            String packageName = context.getPackageName();
+            String flat = Settings.Secure.getString(
+                context.getContentResolver(),
+                "enabled_notification_listeners"
+            );
+            
+            if (!TextUtils.isEmpty(flat)) {
+                String[] names = flat.split(":");
+                for (String name : names) {
+                    ComponentName cn = ComponentName.unflattenFromString(name);
+                    if (cn != null && TextUtils.equals(packageName, cn.getPackageName())) {
+                        return true;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error checking permission", e);
+        }
+        return false;
+    }
+    
+    /**
+     * 打开通知监听设置页面
+     */
+    @UniJSMethod(uiThread = true)
+    public void openSettings() {
+        try {
+            Activity activity = mUniSDKInstance.getActivity();
+            if (activity != null) {
+                Intent intent = new Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS);
+                activity.startActivity(intent);
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error opening settings", e);
+        }
+    }
+    
+    /**
+     * 开始监听通知
+     * @param callback 接收通知的回调函数
+     */
+    @UniJSMethod(uiThread = false)
+    public void startListening(final UniJSCallback callback) {
+        this.messageCallback = callback;
+        
+        // 设置通知回调
+        OtcNotificationListenerService.setCallback(new OtcNotificationListenerService.NotificationCallback() {
+            @Override
+            public void onNotificationPosted(String packageName, String title, String text) {
+                if (messageCallback != null) {
+                    JSONObject data = new JSONObject();
+                    data.put("packageName", packageName);
+                    data.put("title", title);
+                    data.put("text", text);
+                    data.put("timestamp", System.currentTimeMillis());
+                    
+                    // 调用 JS 回调
+                    messageCallback.invokeAndKeepAlive(data);
+                }
+            }
+        });
+        
+        // 检查服务是否运行
+        boolean isRunning = OtcNotificationListenerService.isServiceRunning();
+        Log.d(TAG, "Notification listener started, service running: " + isRunning);
+        
+        // 返回结果
+        if (callback != null) {
+            JSONObject result = new JSONObject();
+            result.put("success", true);
+            result.put("serviceRunning", isRunning);
+            result.put("message", isRunning ? "监听已启动" : "监听已启动，等待权限生效");
+            callback.invoke(result);
+        }
+    }
+    
+    /**
+     * 停止监听通知
+     */
+    @UniJSMethod(uiThread = false)
+    public void stopListening() {
+        OtcNotificationListenerService.removeCallback();
+        this.messageCallback = null;
+        Log.d(TAG, "Notification listener stopped");
+    }
+    
+    /**
+     * 检查服务是否正在运行
+     * @return true 运行中，false 未运行
+     */
+    @UniJSMethod(uiThread = false)
+    public boolean isServiceRunning() {
+        return OtcNotificationListenerService.isServiceRunning();
+    }
+    
+    @Override
+    public void onActivityDestroy() {
+        super.onActivityDestroy();
+        stopListening();
+    }
+}

@@ -1,0 +1,34 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.otc.notification" >
+4
+5    <uses-sdk android:minSdkVersion="21" />
+5-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml
+6
+7    <!-- 通知监听权限 -->
+8    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+8-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:6:5-93
+8-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:6:22-90
+9
+10    <application>
+10-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:8:5-18:19
+11
+12        <!-- 通知监听服务 -->
+13        <service
+13-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:10:9-17:19
+14            android:name="com.otc.notification.OtcNotificationListenerService"
+14-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:11:13-59
+15            android:exported="true"
+15-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:13:13-36
+16            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+16-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:12:13-87
+17            <intent-filter>
+17-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:14:13-16:29
+18                <action android:name="android.service.notification.NotificationListenerService" />
+18-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:15:17-99
+18-->/Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/AndroidManifest.xml:15:25-96
+19            </intent-filter>
+20        </service>
+21    </application>
+22
+23</manifest>

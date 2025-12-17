@@ -1,0 +1,10 @@
+com.otc.notification-core-1.9.0-0 /Users/xuelinggao/.gradle/caches/transforms-3/0727e35ddcdc8de4df2ed1acb80a64e1/transformed/core-1.9.0/res
+com.otc.notification-lifecycle-runtime-2.3.1-1 /Users/xuelinggao/.gradle/caches/transforms-3/38fa33c238170260d37fa5525505cc48/transformed/lifecycle-runtime-2.3.1/res
+com.otc.notification-jetified-annotation-experimental-1.3.0-2 /Users/xuelinggao/.gradle/caches/transforms-3/91f6119f8a96f962eec30a0e71f7d26a/transformed/jetified-annotation-experimental-1.3.0/res
+com.otc.notification-pngs-3 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/build/generated/res/pngs/release
+com.otc.notification-resValues-4 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/build/generated/res/resValues/release
+com.otc.notification-mergeReleaseResources-5 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.otc.notification-mergeReleaseResources-6 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.otc.notification-merged_res-7 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/build/intermediates/merged_res/release
+com.otc.notification-main-8 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/main/res
+com.otc.notification-release-9 /Users/xuelinggao/Documents/develop/work/otc-app/nativeplugins/otc-notification-listener/android/src/release/res
